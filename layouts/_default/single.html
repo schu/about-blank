@@ -3,7 +3,9 @@
 {{ partial "menu.html" . }}
 
 <div class="container">
-{{ .Content }}
+  <h1>{{ .Title }}</h1>
+  <p class="text-muted"><small><time>{{ .Date.Format "Jan 2, 2006" }}</time></small></p>
+  {{ .Content }}
 </div>
 
 {{ partial "footer.html" . }}
