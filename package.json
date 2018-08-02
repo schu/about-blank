@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "bootstrap": "^4.1.2",
+    "sass": "^1.10.0"
+  },
+  "scripts": {
+    "compile": "./node_modules/sass/sass.js scss/about-blank.scss:static/css/about-blank.css",
+    "watch": "./node_modules/sass/sass.js --watch scss/about-blank.scss:static/css/about-blank.css"
+  }
+}

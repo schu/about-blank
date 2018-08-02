@@ -1,0 +1,12 @@
+{{ partial "header.html" . }}
+
+{{ partial "menu.html" . }}
+
+<div class="container">
+  {{ range .Data.Pages }}
+  <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+  <p class="text-muted"><small><time>{{ .Date.Format "Jan 2, 2006" }}</time></small></p>
+  {{ end }}
+</div>
+
+{{ partial "footer.html" . }}
