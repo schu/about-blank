@@ -3,8 +3,13 @@
     "bootstrap": "^4.1.2",
     "sass": "^1.10.0"
   },
+  "devDependencies": {
+    "npm-run-all": "^4.1.3"
+  },
   "scripts": {
-    "compile": "./node_modules/sass/sass.js scss/about-blank.scss:static/css/about-blank.css",
+    "build" : "run-p compile-scss copy-assets",
+    "compile-scss": "./node_modules/sass/sass.js scss/about-blank.scss:static/css/about-blank.css",
+    "copy-assets": "cp node_modules/bootstrap/dist/js/bootstrap.min.js static/js",
     "watch": "./node_modules/sass/sass.js --watch scss/about-blank.scss:static/css/about-blank.css"
   }
 }
