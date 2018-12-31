@@ -1,25 +1,12 @@
-<div class="pos-f-t">
-  <nav class="navbar navbar-light bg-white">
-    <button class="navbar-toggler ml-auto float-sm-right" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </nav>
-
-  <div class="collapse" id="navbarContent">
-    <div class="container">
-      <div class="col-lg-8 offset-lg-2 p-0">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link pb-0" href="/">Home</a>
-          </li>
-          {{ range .Site.Menus.main }}
-          <li class="nav-item">
-            <a class="nav-link pb-0" href="{{ .URL }}">{{ .Name }}</a>
-          </li>
-          {{ end }}
-        </ul>
-        <hr>
-      </div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <p class="mt-1 text-right">
+        <a href="/">Home</a>
+        {{ range $i, $e := .Site.Menus.main -}}
+          <a class="ml-1" href="{{ .URL }}">{{ .Name }}</a>
+        {{ end -}}
+      </p>
     </div>
   </div>
 </div>
