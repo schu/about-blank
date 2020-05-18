@@ -13,7 +13,9 @@
   <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
   {{ end }}
 
-  <link rel="stylesheet" href="/css/about-blank.css">
+  {{ $pjSCSS := resources.Get "scss/about-blank.scss" }}
+  {{ $css := $pjSCSS | resources.ToCSS | resources.Minify }}
+  <link rel="stylesheet" href="{{ $css.Permalink }}">
 
   {{ with .OutputFormats.Get "RSS" }}
   <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
