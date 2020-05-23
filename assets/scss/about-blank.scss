@@ -1,5 +1,6 @@
 
 @import "../css/inter-ui";
+@import "../css/syntax";
 
 $body-color: #515151;
 
@@ -25,3 +26,7 @@ $container-max-widths: (
 );
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+pre {
+  padding: 5px;
+}
