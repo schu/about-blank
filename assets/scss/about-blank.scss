@@ -28,5 +28,10 @@ $container-max-widths: (
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 pre {
-  padding: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  code {
+    word-wrap: normal;
+  }
 }
