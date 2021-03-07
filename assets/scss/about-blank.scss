@@ -35,3 +35,15 @@ pre {
     word-wrap: normal;
   }
 }
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+small {
+  font-size: 0.8 * $font-size-base;
+}
