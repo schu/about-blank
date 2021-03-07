@@ -1,16 +1,13 @@
 {
   "license": "Apache-2.0",
   "dependencies": {
-    "bootstrap": "^4.5.2",
-    "jquery": "^3.5.1",
-    "popper.js": "^1.16.1"
+    "bootstrap": "^5.0.0-beta2"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5"
   },
   "scripts": {
-    "build": "run-p compile-scss copy-bootstrap copy-jquery",
-    "copy-bootstrap": "cp node_modules/bootstrap/dist/js/bootstrap.min.js static/js",
-    "copy-jquery": "cp node_modules/jquery/dist/jquery.min.js static/js"
+    "build": "run-p copy-bootstrap",
+    "copy-bootstrap": "cp node_modules/bootstrap/dist/js/bootstrap.bundle.min.js static/js/"
   }
 }
