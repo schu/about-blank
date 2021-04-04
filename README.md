@@ -12,10 +12,10 @@ A minimalist [Hugo](https://gohugo.io/) theme.
 cd <your Hugo project>
 git submodule add https://github.com/schu/about-blank themes/about-blank
 cd themes/about-blank
-npm --include=dev
+npm install
 ```
 
-In your `config.toml`, set
+In your `config.toml` set
 
 ```
 theme = "about-blank"
