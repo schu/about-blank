@@ -1,0 +1,7 @@
+{{ $htmlTable := .Inner | markdownify }}
+{{ $id := .Get "id" }}
+{{ $class := .Get "class" }}
+{{ $old := "<table>" }}
+{{ $new := printf "<table id=\"%s\" class=\"%s\">" $id $class }}
+{{ $htmlTable := replace $htmlTable $old $new }}
+{{ $htmlTable | safeHTML }}
