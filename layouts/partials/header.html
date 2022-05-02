@@ -7,9 +7,9 @@
 
   {{ hugo.Generator }}
 
-{{ if $.Site.Params.Author }}
+  {{ if $.Site.Params.Author }}
   <meta name="author" content="{{ $.Site.Params.Author }}">
-{{ end }}
+  {{ end }}
 
   {{ if .IsHome }}
   <title>{{ .Site.Title }}</title>
