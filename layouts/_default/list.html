@@ -4,8 +4,15 @@
 
 <div class="container">
   {{ range where .Data.Pages "Params.hidden" "ne" "true" }}
-  <p class="text-muted mt-4 mb-1"><small><time>{{ .Date.Format "Jan 2, 2006" }}</time></small></p>
-  <h3 class="h5"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+    <p class="text-muted mt-4 mb-1"><small><time>{{ .Date.Format "Jan 2, 2006" }}</time></small></p>
+    <h3 class="h5"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+    {{ if $.Site.Params.showTagPills }}
+      <p>
+        {{ range (.GetTerms "tags") }}
+          <a href="{{ .Permalink }}"><span class="badge rounded-pill text-bg-dark">{{ .LinkTitle }}</span></a>
+        {{ end }}
+      </p>
+    {{ end }}
   {{ end }}
 </div>
 
