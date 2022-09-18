@@ -9,7 +9,7 @@
     {{ if $.Site.Params.showTagPills }}
       <p>
         {{ range (.GetTerms "tags") }}
-          <a href="{{ .Permalink }}"><span class="badge rounded-pill text-bg-dark">{{ .LinkTitle }}</span></a>
+          <small><a href="{{ .Permalink }}"><span class="badge rounded-pill text-bg-dark">{{ .LinkTitle }}</span></a></small>
         {{ end }}
       </p>
     {{ end }}
