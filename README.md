@@ -20,3 +20,17 @@ In your `config.toml` set
 ```
 theme = "about-blank"
 ```
+
+## Configuration parameters
+
+Configuration parameters with their defaults.
+
+```
+# Hugo config.toml
+
+[params]
+  # Whether the top navigation should be disabled
+  disableMenu = false
+  # Whether the default list view should show tag pills below items
+  showTagPills = false
+```
