@@ -52,4 +52,5 @@ blockquote {
   @extend .blockquote;
   border-left: 2px solid $dark;
   padding-left: 10px;
+  font-size: $font-size-base;
 }
