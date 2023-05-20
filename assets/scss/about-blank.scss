@@ -25,12 +25,20 @@ $container-max-widths: (
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+code {
+  border-radius: 2px;
+  padding: 2px 4px 2px 4px;
+  background-color: $secondary-bg-subtle !important;
+}
+
 pre {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  border-radius: 3px;
+  padding: 5px;
+  padding-bottom: 8px;
 
   code {
     word-wrap: normal;
+    padding: 0;
   }
 }
 
