@@ -32,9 +32,10 @@ code {
 }
 
 pre {
-  border-radius: 3px;
   padding: 5px;
   padding-bottom: 8px;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.15);
 
   code {
     word-wrap: normal;
