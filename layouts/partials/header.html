@@ -18,7 +18,7 @@
   {{ end }}
 
   {{ $pjSCSS := resources.Get "scss/about-blank.scss" }}
-  {{ $css := $pjSCSS | resources.ToCSS | resources.Minify }}
+  {{ $css := $pjSCSS | css.Sass | resources.Minify }}
   <link rel="stylesheet" href="{{ $css.Permalink }}">
 
   {{ with .OutputFormats.Get "RSS" }}
